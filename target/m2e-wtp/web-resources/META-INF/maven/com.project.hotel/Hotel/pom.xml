@@ -54,5 +54,31 @@
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 		</dependency>
+		
+			<!-- JSF API -->
+		<dependency>
+	        <groupId>com.sun.faces</groupId>
+	        <artifactId>jsf-api</artifactId>
+	        <version>2.2.2</version>
+	    </dependency>
+	    
+	    <!-- JSF Implemantation -->
+	    <dependency>
+	        <groupId>com.sun.faces</groupId>
+	        <artifactId>jsf-impl</artifactId>
+	        <version>2.2.2</version>
+	    </dependency>
+	    
+	    <!-- Servlet API -->
+	    <dependency>
+	        <groupId>javax.servlet</groupId>
+	        <artifactId>javax.servlet-api</artifactId>
+	        <version>3.0.1</version>
+	    </dependency>
+	    
+	    
 	</dependencies>
+	
+	
+    
 </project>

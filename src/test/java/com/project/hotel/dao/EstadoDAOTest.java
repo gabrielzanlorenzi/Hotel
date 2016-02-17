@@ -18,16 +18,17 @@ public class EstadoDAOTest {
 	@Test
 	@Ignore
 	public void salvar() {
+		
 		Estado estado = new Estado();
-		estado.setNome("Rio de Janeiro");
-		estado.setSigla("RJ");
-
+		estado.setNome("Minas Gerais");
+		estado.setSigla("MG");
+		System.out.println(estado.getNome());
 		EstadoDAO estadoDAO = new EstadoDAO();
 		estadoDAO.salvar(estado);
 	}
 
 	@Test
-	@Ignore
+	//@Ignore
 	public void listar() {
 		EstadoDAO estadoDAO = new EstadoDAO();
 		List<Estado> resultado = estadoDAO.listar();
