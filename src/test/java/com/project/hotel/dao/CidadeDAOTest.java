@@ -17,14 +17,14 @@ import com.project.hotel.domain.Estado;
 public class CidadeDAOTest {
 
 	@Test
-	@Ignore
+	//@Ignore
 	public void salvar() {
 		EstadoDAO estadoDAO = new EstadoDAO();
 
-		Estado estado = estadoDAO.buscar(2L);
+		Estado estado = estadoDAO.buscar(3L);
 
 		Cidade cidade = new Cidade();
-		cidade.setNome("Londrina");
+		cidade.setNome("Rio de Janeiro");
 		cidade.setEstado(estado);
 
 		CidadeDAO cidadeDAO = new CidadeDAO();

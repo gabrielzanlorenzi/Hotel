@@ -34,8 +34,8 @@
 		<property name="hbm2ddl.auto">update</property>
 		
 		<!-- Mapeamento das entidades -->
-		<mapping class="br.pro.delfino.drogaria.domain.Cidade" />
-		<mapping class="br.pro.delfino.drogaria.domain.Estado" />
+		<mapping class="com.project.hotel.domain.Cidade" />
+		<mapping class="com.project.hotel.domain.Estado" />
 		
 	</session-factory>
 
