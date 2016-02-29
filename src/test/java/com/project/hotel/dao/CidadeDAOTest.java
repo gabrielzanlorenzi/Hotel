@@ -32,7 +32,51 @@ public class CidadeDAOTest {
 	}
 
 	@Test
-	//@Ignore
+	@Ignore
+	public void editar() {
+		Long codigoCidade = 12L;
+		Long codigoEstado = 3L;
+		
+		CidadeDAO cidadeDAO = new CidadeDAO();
+		EstadoDAO estadoDAO = new EstadoDAO();
+		
+		Cidade cidade = cidadeDAO.buscar(codigoCidade);
+		Estado estado = estadoDAO.buscar(codigoEstado);
+
+		if (cidade == null) {
+			System.out.println("Nenhum registro encontrado para alterar!");
+		} else {
+			System.out.println("Registro a ser alterado:");
+			System.out.println(cidade.getCodigo() + " - " + cidade.getNome());
+
+			cidade.setNome("Cidade Editar");
+			cidade.setEstado(estado);
+
+			cidadeDAO.editar(cidade);
+
+			System.out.println("Registro a alterado para:");
+			System.out.println(cidade.getCodigo() + " - " + cidade.getNome());
+		}
+	}
+
+	@Test
+	@Ignore
+	public void excluir() {
+		Long codigo = 5L;
+		CidadeDAO cidadeDAO = new CidadeDAO();
+		Cidade cidade = cidadeDAO.buscar(codigo);
+
+		if (cidade == null) {
+			System.out.println("Nenhum registro encontrado para remover!");
+		} else {
+			cidadeDAO.excluir(cidade);
+			System.out.println("Cidade removida:");
+			System.out.println(cidade.getCodigo() + " - " + cidade.getNome());
+		}
+	}
+
+	@Test
+	@Ignore
 	public void listar() {
 		CidadeDAO cidadeDAO = new CidadeDAO();
 		List<Cidade> resultado = cidadeDAO.listar();
@@ -65,5 +109,5 @@ public class CidadeDAOTest {
 			System.out.println("Nome do Estado: " + cidade.getEstado().getNome());
 		}
 	}
-	
+
 }

@@ -31,11 +31,14 @@
 		<property name="format_sql">true</property>
 
 		<!-- Cria as tabelas do banco de dados -->
-		<property name="hbm2ddl.auto">validate</property>
+		<property name="hbm2ddl.auto">update</property>
 		
 		<!-- Mapeamento das entidades -->
 		<mapping class="com.project.hotel.domain.Cidade" />
 		<mapping class="com.project.hotel.domain.Estado" />
+		<mapping class="com.project.hotel.domain.Endereco" />
+		<mapping class="com.project.hotel.domain.Pessoa" />
+		<mapping class="com.project.hotel.domain.Cliente" />
 		
 	</session-factory>
 

@@ -2,11 +2,16 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>Hotel</display-name>
   
-  <!-- Página Padrão -->
+<!-- Página Padrão -->
 <welcome-file-list>
     <welcome-file>index.xhtml</welcome-file>
 </welcome-file-list>
 
+<!-- Tema PrimeFaces -->
+<context-param>
+    <param-name>primefaces.THEME</param-name>
+    <param-value>redmond</param-value>
+  </context-param>
 
 <servlet>
     <servlet-name>Faces Servlet</servlet-name>
@@ -16,12 +21,10 @@
     <load-on-startup>1</load-on-startup>
 </servlet>
 
-
 <servlet-mapping>
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>*.xhtml</url-pattern>
 </servlet-mapping>
-
 
 <session-config>
     <session-timeout>30</session-timeout>
